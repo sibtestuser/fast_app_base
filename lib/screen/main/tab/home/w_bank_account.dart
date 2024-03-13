@@ -1,3 +1,4 @@
+import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/widget/w_rounded_container.dart';
 import 'package:fast_app_base/screen/main/tab/home/vo/bank_account.dart';
 import 'package:flutter/material.dart';
@@ -33,12 +34,17 @@ class BankAccountWidget extends StatelessWidget {
             ],
           ),
         ),
-        Expanded(child: SizedBox.shrink()),
+        const Expanded(child: SizedBox.shrink()),
         RoundedContainer(
+          backgroundColor: context.appColors.buttonBackground,
+
+          radius: 10,
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: const Text(
             '송금',
-            style: TextStyle(color: Colors.white, fontSize: 12),
+            style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold),
           ),
+          // padding: const Ed,
         ),
       ],
     );

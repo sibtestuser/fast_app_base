@@ -31,6 +31,8 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
 
   bool get extendBody => true;
 
+  static const double bottomNavigatorHeight = 50;
+
   static double get bottomNavigationBarBorderRadius => 30.0;
   @override
   FutureOr<void> afterFirstLayout(BuildContext context) {
@@ -54,7 +56,8 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
         extendBody: extendBody, //bottomNavigationBar 아래 영역 까지 그림
         drawer: const MenuDrawer(),
         body: Container(
-          color: context.appColors.seedColor.getMaterialColorValues[200],
+          //
+          //  color: context.appColors.veryBrightGrey,
           padding: EdgeInsets.only(bottom: extendBody ? 60 - bottomNavigationBarBorderRadius : 0),
           child: SafeArea(
             bottom: !extendBody,

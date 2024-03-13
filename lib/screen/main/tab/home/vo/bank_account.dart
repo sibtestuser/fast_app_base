@@ -11,4 +11,8 @@ class BankAccount {
     this.balance, {
     this.accountTypeName,
   });
+
+  String toString() {
+    return '${bank.name} $balance    $accountTypeName \n';
+  }
 }

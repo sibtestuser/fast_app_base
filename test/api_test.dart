@@ -22,4 +22,12 @@ void main() {
   //   expect(response.statusCode, equals(200));
   //   expect(response.data['id'], equals(1));
   // });
+
+  var list = [1, 2, 3];
+  var newList = list.map((e) => e + 1);
+  print(list);
+  print(newList);
+  list[0] = 0;
+  print(list);
+  print(newList);
 }
